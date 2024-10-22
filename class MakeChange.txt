@@ -1,0 +1,35 @@
+class MakeChange
+{
+    public static void Main()
+    {
+        Write("Enter total number of dollars: ");
+        int dollars = Convert.ToInt32(ReadLine());
+
+        int twenties = dollars / 20;
+        dollars %= 20;
+        int tens = dollars / 10;
+        dollars %= 10;
+        int fives = dollars / 5;
+        int ones = dollars % 5;
+
+        WriteLine("twenties: {0} tens: {1} fives: {2} ones: {3}", twenties, tens, fives, ones);
+    }
+}
+
+
+
+
+class Testsinteractive  {
+  static void Main() {
+        const int TEST_COUNT = 8;
+        double totalScore = 0;
+        double score, averageScore;
+        for(int count=1; count<=TEST_COUNT;count++){
+            Console.Write("Enter test score {0} >> ",count);
+            score = Convert.ToDouble(Console.ReadLine());
+            totalScore += score;
+        }
+        averageScore = totalScore/TEST_COUNT;
+        Console.WriteLine("The average test score is {0:.00}",averageScore);
+  }
+}
